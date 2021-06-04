@@ -1,0 +1,60 @@
+package com.bridgelabz.multithreading;
+
+
+class Abc extends Thread{
+	
+	@Override
+	public void run() {
+		for(int i=0;i<=5;i++) {
+		System.out.println("HI");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+	}
+}
+
+
+
+class Lmn extends Thread{
+	
+	@Override
+	public void run() {
+		for(int i=0;i<=5;i++) {
+		System.out.println("Hello");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Aut
+} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+	}
+}
+
+
+public class ThreadExample {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.out.println("Hiiii");
+		Abc abc=new Abc();
+		Lmn lmn=new Lmn();
+//		abc.run();
+//		lmn.run();
+		
+		abc.start();
+		Thread.sleep(10);
+		lmn.start();
+		
+	}
+
+}
+
+
+localhost:3000/Todos
